@@ -7,8 +7,7 @@
 <head>
 	<meta charset="ISO-8859-1">
 	<title>Insert title here</title>
-	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.css">
-	<script type="text/javascript" src="${pageContext.request.contextPath}/js/bootstrap.js"></script>
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
 </head>
 	<body>
 		<jsp:include page="/WEB-INF/Generales/Header.jsp"/>
