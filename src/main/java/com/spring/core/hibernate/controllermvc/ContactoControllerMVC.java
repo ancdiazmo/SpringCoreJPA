@@ -27,10 +27,11 @@ public class ContactoControllerMVC {
 	public ModelAndView manejaContactos () {
 		
 		List<Contacto> contactos = contactoService.findAll();
-		ModelAndView view = new ModelAndView ();
-		view.addObject("contactos", contactos);
-		view.setViewName("Contacto/ManejoContactos");
-		return view;
+		ModelAndView model = new ModelAndView ();
+		model.addObject("contactos", contactos);
+		model.addObject("vista", "Contacto");
+		model.setViewName("index");
+		return model;
 	}
 	
 	@GetMapping("/Contactomvc/agregar")

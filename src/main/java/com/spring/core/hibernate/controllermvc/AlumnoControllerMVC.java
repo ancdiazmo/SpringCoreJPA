@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.RollbackException;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,7 +28,8 @@ public class AlumnoControllerMVC {
 		List<Alumno> alumnos = alumnoService.findAll();
 		ModelAndView model = new ModelAndView ();
 		model.addObject("alumnos", alumnos);
-		model.setViewName("Alumno/ManejoAlumnos");
+		model.addObject("vista", "Alumno");
+		model.setViewName("index");
 		return model;
 	}
 	

@@ -29,7 +29,8 @@ public class DomicilioControllerMVC {
 		List<Domicilio> domicilios = domicilioService.findAll();
 		ModelAndView model = new ModelAndView ();
 		model.addObject("domicilios",domicilios);
-		model.setViewName("Domicilio/ManejaDomicilio");
+		model.addObject("vista","Domicilio");
+		model.setViewName("index");
 		return model;
 	}
 	

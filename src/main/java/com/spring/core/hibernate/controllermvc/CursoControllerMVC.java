@@ -27,7 +27,8 @@ public class CursoControllerMVC {
 		ModelAndView model = new ModelAndView ();
 		List<Curso> cursos = cursoService.findAll();
 		model.addObject("cursos", cursos);
-		model.setViewName("Curso/ManejoCursos");
+		model.addObject("vista","Curso");
+		model.setViewName("index");
 		return model;
 	}
 	
