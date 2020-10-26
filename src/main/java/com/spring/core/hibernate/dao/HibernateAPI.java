@@ -3,10 +3,12 @@ package com.spring.core.hibernate.dao;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import org.springframework.stereotype.Component;
+
+import org.springframework.stereotype.Repository;
+
 import com.spring.core.hibernate.util.LogsYMensajesConstantes;
 
-@Component
+@Repository
 public class HibernateAPI {
 	
 	private EntityManager manager;

@@ -15,7 +15,6 @@ dependencies {
 
 	//WEB
 	implementation 'org.springframework.boot:spring-boot-starter-web:2.3.2.RELEASE' //Spring-web
-	providedRuntime 'org.apache.tomcat.embed:tomcat-embed-jasper:9.0.36' //Renderizador de JSP
 	implementation 'javax.servlet:jstl:1.2' //Libreria JSTL para las JSPs
 	
 	//Base de datos
