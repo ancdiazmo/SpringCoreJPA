@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <h3>Manejador de domicilios</h3>
 <a href="${pageContext.request.contextPath}/Domiciliomvc/agregar">Agregar domicilio</a>
-<table border="1" class="table table-striped">
+<table border="1" class="table table-striped" id="tablaDomicilio">
 	<thead class="thead-dark"> 
 		<tr>
 			<th id = "ID">ID</th>
@@ -21,3 +21,7 @@
 		</tr>
 	</c:forEach>
 </table>
+
+<script>
+	$('#tablaDomicilio').DataTable();
+</script>

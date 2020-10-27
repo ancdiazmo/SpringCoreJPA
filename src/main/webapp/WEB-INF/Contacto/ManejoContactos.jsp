@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <h3>Manejo de contactos</h3>
 <a href="${pageContext.request.contextPath}/Contactomvc/agregar">Agregar contacto</a>
-<table border="1" class="table table-striped">
+<table border="1" class="table table-striped" id="tablaContactos">
 	<thead class="thead-dark"> 
 		<tr>
 			<th id = "ID">ID</th>
@@ -25,3 +25,7 @@
 		</tr>
 	</c:forEach>
 </table>
+
+<script>
+	$('#tablaContactos').DataTable();
+</script>

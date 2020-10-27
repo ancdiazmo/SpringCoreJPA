@@ -4,7 +4,7 @@
 <h3>Manejo cursos</h3>
 
 <a href="${pageContext.request.contextPath}/Cursomvc/agregar">Agrega curso</a>
-<table border="1" class="table table-striped">
+<table border="1" class="table table-striped" id="tablaCursos">
 	<thead class="thead-dark"> 
 		<tr>
 			<th id = "ID">ID</th>
@@ -26,3 +26,7 @@
 		</tr>
 	</c:forEach>
 </table>
+
+<script>
+	$('#tablaCursos').DataTable();
+</script>

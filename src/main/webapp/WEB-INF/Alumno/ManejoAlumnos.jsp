@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <h3>Alumnos</h3>
 <a href="${pageContext.request.contextPath}/Alumno/agregar">Agregar alumno</a>
-	<table border = "1" class="table table-striped">
+	<table border = "1" class="table table-striped" id="tablaAlumnos">
 	<thead class="thead-dark">
 		<tr>
 			<th id = "ID">ID</th>
@@ -27,3 +27,7 @@
 		</tr>
 	</c:forEach>
 	</table>
+	
+	<script>
+        $('#tablaAlumnos').DataTable();
+    </script>

@@ -4,7 +4,7 @@
 <h3>Manejador de asignaciones</h3>
 
 <a href="${pageContext.request.contextPath}/Asignacion/agregar">Agregar asignacion</a>
-<table border="1" class="table table-striped">
+<table border="1" class="table table-striped" id="tablaAsignaciones">
 	<thead class="thead-dark"> 
 		<tr>
 			<th>ID</th>
@@ -31,3 +31,7 @@
 		</tr>
 	</c:forEach>
 </table>
+
+<script>
+	$('#tablaAsignaciones').DataTable();
+</script>

@@ -13,7 +13,12 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/dashboard/">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
-	<link href="${pageContext.request.contextPath}/css/dashboard.css" rel="stylesheet">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/dashboard.css">
+	
+	<script src="${pageContext.request.contextPath}/js/jquery-3.3.1.min.js"></script>
+	
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/jquery.dataTables.css">
+	<script src="${pageContext.request.contextPath}/js/jquery.dataTables.js"></script>
 	
     <style>
       .bd-placeholder-img {
