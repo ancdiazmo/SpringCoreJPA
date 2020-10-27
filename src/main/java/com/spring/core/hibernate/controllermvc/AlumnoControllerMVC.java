@@ -54,8 +54,12 @@ public class AlumnoControllerMVC {
 	@GetMapping("/Alumno/agregar/{id}")
 	public ModelAndView modificarAlumno(@PathVariable String id) {
 		Alumno alumno = alumnoService.findById(id);
+		List<Contacto> contactos = contactoService.findAll();
+		List<Domicilio> domicilios = domicilioService.findAll();
 		ModelAndView model = new ModelAndView ();
 		model.setViewName("Alumno/ModificarAlumno");
+		model.addObject("contactos", contactos);
+		model.addObject("domicilios", domicilios);
 		model.addObject("alumno", alumno);
 		return model;
 	}
