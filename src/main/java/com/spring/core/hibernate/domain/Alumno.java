@@ -16,18 +16,18 @@ import javax.persistence.OneToMany;
 public class Alumno {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	@Column(name = "NOMBRE", nullable = false)
 	private String nombre;
 	@Column(name = "APELLIDO", nullable = false)
 	private String apellido;
 	
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne(cascade = CascadeType.REMOVE)
 	@JoinColumn(name = "ID_DOMICILIO", nullable = false)
 	private Domicilio domicilio;
 	
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne(cascade = CascadeType.REMOVE)
 	@JoinColumn(name = "ID_CONTACTO", nullable = false)
 	private Contacto contacto;
 	
@@ -36,7 +36,7 @@ public class Alumno {
 	
 	
 	public Alumno () {
-		
+		this.id = 0;
 	}
 
 	public Integer getId() {

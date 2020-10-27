@@ -34,16 +34,7 @@
     
   </head>
   <body>
-    <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-	  <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="${pageContext.request.contextPath}/index">Spring Core JPA</a>
-	    
-	  <ul class="navbar-nav px-3">
-	    <li class="nav-item text-nowrap">
-	      <a class="nav-link" href="#">Salir</a>
-	    </li>
-	  </ul>
-	</nav>
-
+	<jsp:include page="/WEB-INF/Generales/Header.jsp"></jsp:include>
 	<div class="container-fluid">
 	  <div class="row">
 	    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
@@ -122,8 +113,9 @@
 	        </ul>
 	      </div>
 	    </nav>
-	
+	  </div>
 	    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+	      <br><br><br>
 	      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap 
 	      align-items-center pt-3 pb-2 mb-3 border-bottom">
 	        <h1 class="h2">Gestion de tablas</h1>
@@ -152,15 +144,15 @@
 	      	</c:if>
 	      </div>
 	    </main>
-	  </div>
+	  
 	</div>
+	<jsp:include page="/WEB-INF/Generales/Footer.jsp"></jsp:include>
+	</body>
 	
-	
-	
-	  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
-      <script src="${pageContext.request.contextPath}/js/bootstrap.bundle.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
-      <script src="${pageContext.request.contextPath}/js/dashboard.js"></script></body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+    <script src="${pageContext.request.contextPath}/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/dashboard.js"></script>
 </html>

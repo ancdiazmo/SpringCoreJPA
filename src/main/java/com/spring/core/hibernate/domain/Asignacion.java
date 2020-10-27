@@ -13,7 +13,7 @@ import javax.persistence.ManyToOne;
 public class Asignacion {
 	
 	@Id
-	@GeneratedValue (strategy = GenerationType.AUTO)
+	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	private Integer id;
 	@Column(name = "TURNO", nullable = false)
 	private String turno;
@@ -27,7 +27,7 @@ public class Asignacion {
 	private Curso curso;
 	
 	public Asignacion () {
-		
+		this.id = 0;
 	}
 
 	public Integer getId() {
