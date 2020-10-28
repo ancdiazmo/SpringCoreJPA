@@ -45,7 +45,7 @@
 							  <option disabled selected>Ingresa el domicilio del usuario</option>
 							  <c:forEach var = "domicilio" items="${domicilios}">
 							  	<option value= "${domicilio.id}">
-							  	calle-${{domicilio.calle}}--${{domicilio.nroCalle}}--${{domicilio.pais}}</option>
+							  	calle-${domicilio.calle}--${domicilio.nroCalle}--${domicilio.pais}</option>
 							  </c:forEach>
 							</select>
 							<c:if test="${validaciones.domicilio == 'fail'}">
@@ -62,7 +62,7 @@
 							  <option disabled selected>Ingresa el contacto del usuario</option>
 							  <c:forEach var = "contacto" items="${contactos}">
 							  	<option value= "${contacto.id}">
-							  	${{contacto.telefono}}-${{contacto.email}}</option>
+							  	${contacto.telefono}-${contacto.email}</option>
 							  </c:forEach>
 							</select>
 							<c:if test="${validaciones.contacto == 'fail'}">

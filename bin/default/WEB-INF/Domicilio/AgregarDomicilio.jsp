@@ -69,16 +69,6 @@
 				</div>            
 			</form>
 		</div>
-		
-		
-		
-		
-		<!-- <form action="${pageContext.request.contextPath}/Domiciliomvc/agregar" method="post">
-			Ingrese la calle: <input type="text" name="calle"> <br>
-			Ingrese el numero de calle: <input type="text" name="nroCalle"> <br>
-			Ingrese el pais: <input type="text" name="pais"> <br>
-			<input type="submit" name="guardar" value="Guardar"> <br>
-		</form> -->
 		<jsp:include page="/WEB-INF/Generales/Footer.jsp"></jsp:include>
 	</body>
 </html>
