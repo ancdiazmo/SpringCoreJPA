@@ -15,13 +15,14 @@
 			<th>email alumno</th>
 			<th>Nombre Curso</th>
 			<th>Precio curso</th>
+			<th>Editar</th>
 		</tr>
 	</thead>
 	<c:forEach var = "asignacion" items = "${asignaciones}">
 		<tr>
 			<td>${asignacion.id}</td>
 			<td>${asignacion.turno}</td>
-			<td>${asignacion.alumno.nombre}</td>
+			<td>${asignacion.alumno.nombre} ${asignacion.alumno.apellido}</td>
 			<td>${asignacion.alumno.domicilio.calle} - ${asignacion.alumno.domicilio.nroCalle} - ${asignacion.alumno.domicilio.pais}</td>
 			<td>${asignacion.alumno.contacto.telefono}</td>
 			<td>${asignacion.alumno.contacto.email}</td>

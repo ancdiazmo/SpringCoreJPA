@@ -18,11 +18,11 @@ public class Asignacion {
 	@Column(name = "TURNO", nullable = false)
 	private String turno;
 	
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne(cascade = CascadeType.REMOVE)
 	@JoinColumn(name = "ID_ALUMNO", nullable = false)
 	private Alumno alumno;
 	
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne(cascade = CascadeType.REMOVE)
 	@JoinColumn(name = "ID_CURSO", nullable = false)
 	private Curso curso;
 	
