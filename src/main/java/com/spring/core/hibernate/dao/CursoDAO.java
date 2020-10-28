@@ -20,6 +20,7 @@ public class CursoDAO extends DAO {
 		manager.getManager().getTransaction().begin();
 		manager.getManager().persist(curso);
 		manager.getManager().getTransaction().commit();
+		manager.getManager().detach(curso);
 	}
 	
 	public void update (Curso curso) {

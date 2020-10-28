@@ -18,11 +18,11 @@ public class Alumno {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	@Column(name = "NOMBRE", nullable = false)
-	private String nombre;
 	@Column(name = "APELLIDO", nullable = false)
 	private String apellido;
-	
+	@Column(name = "NOMBRE", nullable = false)
+	private String nombre;
+
 	@ManyToOne(cascade = CascadeType.REMOVE)
 	@JoinColumn(name = "ID_DOMICILIO", nullable = false)
 	private Domicilio domicilio;

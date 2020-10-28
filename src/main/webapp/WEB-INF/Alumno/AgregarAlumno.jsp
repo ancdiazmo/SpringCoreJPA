@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="ISO-8859-1">
+	<meta charset="UTF-8">
 	<title>Insert title here</title>
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
 </head>
@@ -83,7 +83,7 @@
 					</div>
 					<div class="col-md-3">
 						<div class="submit-button text-center">
-							<a href="${pageContext.request.contextPath}/Alumno" class="btn btn-danger" id="Cancelar" name="cancelar">
+							<a href="${pageContext.request.contextPath}/Alumno" class="btn btn-danger" id="cancelar" name="cancelar">
 								Cancelar
 							</a>
 						</div>

@@ -16,10 +16,11 @@ public class DomicilioDAO extends DAO {
 	@Autowired
 	private HibernateAPI manager;
 	
-	public void insert (Domicilio domicio) {
+	public void insert (Domicilio domicilio) {
 		manager.getManager().getTransaction().begin();
-		manager.getManager().persist(domicio);
+		manager.getManager().persist(domicilio);
 		manager.getManager().getTransaction().commit();
+		manager.getManager().detach(domicilio);
 	}
 	
 	public void update (Domicilio domicilio) {

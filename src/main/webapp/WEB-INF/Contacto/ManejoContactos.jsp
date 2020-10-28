@@ -9,18 +9,22 @@
 			<th id = "ID">ID</th>
 			<th id = "Email">Email</th>
 			<th id = "Telefono">Telefono</th>
+			<th id = "Editar">Editar</th>
 		</tr>
 	</thead>
 	<c:forEach var="contacto" items="${contactos}">
 		<tr>
 			<td>
-				<a href="${pageContext.request.contextPath}/Contactomvc/agregar/${contacto.id}">${contacto.id}</a>	
+				${contacto.id}	
 			</td>
 			<td>
 				${contacto.email}
 			</td>
 			<td>
 				${contacto.telefono}
+			</td>
+			<td>
+				<a href="${pageContext.request.contextPath}/Contactomvc/agregar/${contacto.id}">Editar</a>
 			</td>
 		</tr>
 	</c:forEach>
