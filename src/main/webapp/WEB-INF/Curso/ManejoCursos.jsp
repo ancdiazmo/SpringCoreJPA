@@ -10,18 +10,22 @@
 			<th id = "ID">ID</th>
 			<th id = "Nombre">Nombre</th>
 			<th id = "Precio">Precio</th>
+			<th id = "Editar">Editar</th>
 		</tr>
 	</thead>
 	<c:forEach var="curso" items="${cursos}">
 		<tr>
 			<td>
-			 	<a href="${pageContext.request.contextPath}/Cursomvc/agregar/${curso.id}">${curso.id}</a> 
+			 	${curso.id}
 			</td>
 			<td>
 				${curso.nombre} 
 			</td>
 			<td>
 				${curso.precio} 
+			</td>
+			<td>
+				<a href="${pageContext.request.contextPath}/Cursomvc/agregar/${curso.id}">Editar</a> 
 			</td>
 		</tr>
 	</c:forEach>
