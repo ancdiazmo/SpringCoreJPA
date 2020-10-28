@@ -27,7 +27,7 @@ public class CursoService extends GeneralService {
 			String mensaje = LogsYMensajesConstantes.generaMensajeErrorInsert("Curso", "Precio");
 			throw new CursoException (mensaje);
 		}
-		else if (curso.getId() == null) {
+		else if (curso.getId() == 0) {
 			cursoDAO.insert(curso);
 		}
 		else if (curso.getId() != null) {
@@ -37,7 +37,7 @@ public class CursoService extends GeneralService {
 	
 	public void remove (Curso curso) throws CursoException, RollbackException {
 		
-		if (curso.getId() == null) {
+		if (curso.getId() == 0) {
 			String mensaje = LogsYMensajesConstantes.generaMensajeErrorDelete("Curso", "id");
 			throw new CursoException(mensaje);
 		}

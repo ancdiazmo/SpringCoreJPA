@@ -23,7 +23,8 @@ public class AsignacionControllerMVC {
 		List<Asignacion> asignaciones = asignacionService.findAll();
 		ModelAndView model = new ModelAndView ();
 		model.addObject("asignaciones", asignaciones);
-		model.setViewName("/Asignaciones/ManejadorAsignaciones");
+		model.addObject("vista", "Asignacion");
+		model.setViewName("index");
 		return model;
 	}
 	

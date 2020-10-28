@@ -16,6 +16,7 @@ public class AsignacionDAO extends DAO {
 		manager.getManager().getTransaction().begin();
 		manager.getManager().persist(asignacion);
 		manager.getManager().getTransaction().commit();
+		manager.getManager().detach(asignacion);
 	}
 	
 	public void updateAsignacion (Asignacion asignacion) {

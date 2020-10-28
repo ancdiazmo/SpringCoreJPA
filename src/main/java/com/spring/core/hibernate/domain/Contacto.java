@@ -12,7 +12,7 @@ import javax.persistence.OneToMany;
 public class Contacto {
 	
 	@Id
-	@GeneratedValue (strategy = GenerationType.AUTO)
+	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	@Column(name = "Id")
 	private Integer id;
 	@Column(name = "TELEFONO", nullable = false)
@@ -24,7 +24,7 @@ public class Contacto {
 	private List<Alumno> alumnos;
 	
 	public Contacto () {
-		//Contructor vacio de Contacto
+		this.id = 0;
 	}
 
 	public String getTelefono() {

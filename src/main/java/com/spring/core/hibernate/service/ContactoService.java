@@ -28,7 +28,7 @@ public class ContactoService extends GeneralService {
 			String mensaje = LogsYMensajesConstantes.generaMensajeErrorInsert("Contacto", "Email");
 			throw new ContactoException(mensaje);
 		}
-		else if (contacto.getId() == null) {
+		else if (contacto.getId() == 0) {
 			contactoDAO.insert(contacto);
 		}
 		else {
@@ -38,7 +38,7 @@ public class ContactoService extends GeneralService {
 	
 	public void removeContacto (Contacto contacto) 
 			throws ContactoException, PersistenceException, RollbackException {
-		if (contacto.getId() == null) {
+		if (contacto.getId() == 0) {
 			String mensaje = LogsYMensajesConstantes.generaMensajeErrorDelete("Contacto", "id");
 			throw new ContactoException(mensaje);
 		}

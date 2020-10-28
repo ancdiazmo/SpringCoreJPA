@@ -32,7 +32,7 @@ public class DomicilioService extends GeneralService {
 			String mensaje = LogsYMensajesConstantes.generaMensajeErrorInsert("Domicilio", "Pais");
 			throw new DomicilioException (mensaje);
 		}
-		else if (domicilio.getId() == null) {
+		else if (domicilio.getId() == 0) {
 			domicilioDAO.insert(domicilio);
 		}
 		else {
@@ -42,7 +42,7 @@ public class DomicilioService extends GeneralService {
 
 	public void remove(Domicilio domicilio) throws DomicilioException, RollbackException {
 		
-		if (domicilio.getId() == null) {
+		if (domicilio.getId() == 0) {
 			String mensaje = LogsYMensajesConstantes.generaMensajeErrorDelete("Domicilio", "id");
 			throw new DomicilioException (mensaje);
 		}

@@ -34,8 +34,9 @@ public class AlumnoService extends GeneralService {
 		}
 		else if (alumno.getDomicilio() == null) {
 			String mensaje = LogsYMensajesConstantes.generaMensajeErrorInsert("Alumno", "Domicilio");
+			throw new AlumnoException (mensaje);
 		}
-		else if (alumno.getId() == null) {
+		else if (alumno.getId() == 0) {
 			alumnoDAO.insert(alumno);
 		}
 		else {

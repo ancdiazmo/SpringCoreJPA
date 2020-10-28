@@ -15,7 +15,7 @@ import com.spring.core.hibernate.util.LogsYMensajesConstantes;
 public class Curso {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "Id")
 	private Integer id;
 	@Column(name = "NOMBRE", nullable = false)
@@ -27,7 +27,7 @@ public class Curso {
 	private List<Asignacion> asignaciones;
 	
 	public Curso () {
-
+		this.id = 0;
 	}
 	
 	public Integer getId() {

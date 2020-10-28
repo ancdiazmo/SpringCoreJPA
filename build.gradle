@@ -15,14 +15,13 @@ dependencies {
 
 	//WEB
 	implementation 'org.springframework.boot:spring-boot-starter-web:2.3.2.RELEASE' //Spring-web
-	providedRuntime 'org.apache.tomcat.embed:tomcat-embed-jasper:9.0.36' //Renderizador de JSP
 	implementation 'javax.servlet:jstl:1.2' //Libreria JSTL para las JSPs
 	
 	//Base de datos
 	implementation 'mysql:mysql-connector-java:8.0.20' //Driver
-	implementation 'org.hibernate:hibernate-core:5.4.20.Final' //Hibernate TODO:cambiar a Spring-jpa
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.3.2.RELEASE' //Spring-JPA
 	
 	//Test
-	testImplementation 'org.springframework.boot:spring-boot-starter-test:2.3.2.RELEASE'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test:2.3.2.RELEASE' //Junit
 }
 

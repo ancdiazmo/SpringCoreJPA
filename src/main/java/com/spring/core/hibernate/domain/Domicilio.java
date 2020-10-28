@@ -13,7 +13,7 @@ import javax.persistence.OneToMany;
 public class Domicilio {
 	
 	@Id
-	@GeneratedValue (strategy = GenerationType.AUTO)
+	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	private Integer id;
 	@Column(name = "CALLE", nullable = false)
 	private String calle;
@@ -26,7 +26,7 @@ public class Domicilio {
 	private List<Alumno> alumnos;
 	
 	public Domicilio () {
-		//Contructor por defecto de Domicilio
+		this.id = 0;
 	}
 
 	public Integer getId() {

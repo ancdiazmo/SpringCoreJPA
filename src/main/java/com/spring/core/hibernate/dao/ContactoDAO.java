@@ -21,6 +21,7 @@ public class ContactoDAO extends DAO {
 		manager.getManager().getTransaction().begin();
 		manager.getManager().persist(contacto);
 		manager.getManager().getTransaction().commit();
+		manager.getManager().detach(contacto);
 	}
 	public void update (Contacto contacto) throws PersistenceException {
 		manager.getManager().getTransaction().begin();

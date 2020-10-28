@@ -20,6 +20,7 @@ public class AlumnoDAO extends DAO {
 		manager.getManager().getTransaction().begin();
 		manager.getManager().persist(alumno);
 		manager.getManager().getTransaction().commit();
+		manager.getManager().detach(alumno);
 	}
 	
 	public void update (Alumno alumno) {

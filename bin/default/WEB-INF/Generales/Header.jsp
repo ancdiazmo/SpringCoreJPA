@@ -1,3 +1,12 @@
-<header id ="main-header" class = "py-1 bg-info text-white">
-	<h2>Sistema SGA (sistema de gestion de alumnos)</h2>
-</header>
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" 
+  href="${pageContext.request.contextPath}/index">Spring Core JPA</a>
+    
+  <ul class="navbar-nav px-3">
+    <li class="nav-item text-nowrap">
+      <a class="nav-link" href="#">Salir</a>
+    </li>
+  </ul>
+</nav>
+
+<!--<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark"> -->
