@@ -7,48 +7,33 @@
 	<meta charset="UTF-8">
 	<title>Insert title here</title>
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
+	
+	<script src="${pageContext.request.contextPath}/js/jquery-3.3.1.min.js"></script>
+	<script src="${pageContext.request.contextPath}/js/validator.js"></script>
 </head>
 	<body>
 		<jsp:include page="/WEB-INF/Generales/Header.jsp"/> <br><br><br>
 		<div class="container text-center">
 		<h1>Modificar domicilio</h1>
-			<form action="${pageContext.request.contextPath}/Domiciliomvc/agregar" method="post">
+			<form data-toggle="validator" action="${pageContext.request.contextPath}/Domiciliomvc/agregar" method="post">
 				<input type="hidden" name="id" value="${domicilio.id}">
 				<div class="row">
 					<div class="col-md-12">
 						<div class="form-group">
-							<input type="text" class="form-control" id="calle" name="calle" placeholder="Calle" 
-							required data-error="Ingresa la calle" value="${domicilio.calle}">
-							
-							<c:if test="${validaciones.calle == 'fail'}">
-								<div class="text-danger">
-	                                La calle es obligatoria
-	                            </div>
-	                        </c:if>
+							<input type="text" class="form-control" id="calle" name="calle" placeholder="Calle" required data-error="La calle es obligatoria" value="${domicilio.calle}">
+							<div class="help-block with-errors text-danger"></div>
 						</div>                                 
 					</div>
 					<div class="col-md-12">
 						<div class="form-group">
-							<input type="text" class="form-control" id="nroCalle" name="nroCalle" placeholder="Numero de calle" 
-							required data-error="Ingresa el numero de la calle" value="${domicilio.nroCalle}">
-							
-							<c:if test="${validaciones.nroCalle == 'fail'}">
-								<div class="text-danger">
-	                                La calle es obligatoria
-	                            </div>
-	                        </c:if>
+							<input type="text" class="form-control" id="nroCalle" name="nroCalle" placeholder="Numero de calle" required data-error="El numero de la calle es obligatorio" value="${domicilio.nroCalle}">
+							<div class="help-block with-errors text-danger"></div>
 						</div>                                 
 					</div>
 					<div class="col-md-12">
 						<div class="form-group">
-							<input type="text" class="form-control" id="pais" name="pais" placeholder="Ingresa el pais" 
-							required data-error="Ingresa el pais" value="${domicilio.pais}">
-							
-							<c:if test="${validaciones.pais == 'fail'}">
-								<div class="text-danger">
-	                                El pais es obligatorio
-	                            </div>
-	                        </c:if>
+							<input type="text" class="form-control" id="pais" name="pais" placeholder="Ingresa el pais" required data-error="El pais es obligatorio" value="${domicilio.pais}">
+							<div class="help-block with-errors text-danger"></div>
 						</div>                                 
 					</div>
 					
