@@ -7,35 +7,26 @@
 	<meta charset="UTF-8">
 	<title>Insert title here</title>
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
+	
+	<script src="${pageContext.request.contextPath}/js/jquery-3.3.1.min.js"></script>
+	<script src="${pageContext.request.contextPath}/js/validator.js"></script>
 </head>
 	<body>
 		<jsp:include page="/WEB-INF/Generales/Header.jsp"/> <br><br><br>
 		<div class="container text-center">
 			<h1>Agregar Contacto</h1>
-			<form action="${pageContext.request.contextPath}/Contactomvc/agregar" method="post">
+			<form data-toggle="validator" action="${pageContext.request.contextPath}/Contactomvc/agregar" method="post">
 				<div class="row">
 					<div class="col-md-12">
 						<div class="form-group">
-							<input type="text" class="form-control" id="email" name="email" placeholder="Email" 
-							required data-error="Ingresa el email">
-							
-							<c:if test="${validaciones.email == 'fail'}">
-								<div class="text-danger">
-	                                El email es obligatorio
-	                            </div>
-	                        </c:if>
+							<input type="email" class="form-control" id="email" name="email" placeholder="Email" required data-error="El email es obligatorio y debe tener el formato correcto">
+							<div class="help-block with-errors text-danger"></div>
 						</div>                                 
 					</div>
 					<div class="col-md-12">
 						<div class="form-group">
-							<input type="text" class="form-control" id="telefono" name="telefono" placeholder="Telefono" 
-							required data-error="Ingresa el telefono">
-							
-							<c:if test="${validaciones.telefono == 'fail'}">
-								<div class="text-danger">
-	                                La telefono es obligatorio
-	                            </div>
-	                        </c:if>
+							<input type="text" class="form-control" id="telefono" name="telefono" placeholder="Telefono" required data-error="El telefono es obligatorio">
+							<div class="help-block with-errors text-danger"></div>
 						</div>                                 
 					</div>
 					<div class="col-md-3"></div>
@@ -57,17 +48,6 @@
 				</div>            
 			</form>
 		</div>
-		
-		
-		
-		
-		
-		
-		<!-- <form action="${pageContext.request.contextPath}/Contactomvc/agregar" method="post">
-			Ingrese el telefono: <input type="text" name="telefono"> <br>
-			Ingrese el email: <input type="text" name="email"> <br>
-			<input type="submit" name="guardar" value="Guardar">
-		</form> -->
 		<jsp:include page="/WEB-INF/Generales/Footer.jsp"></jsp:include>
 	</body>
 </html>

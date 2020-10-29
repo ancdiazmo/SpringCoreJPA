@@ -7,36 +7,27 @@
 	<meta charset="UTF-8">
 	<title>Insert title here</title>
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
+	
+	<script src="${pageContext.request.contextPath}/js/jquery-3.3.1.min.js"></script>
+	<script src="${pageContext.request.contextPath}/js/validator.js"></script>
 </head>
 	<body>
 		<jsp:include page="/WEB-INF/Generales/Header.jsp"/> <br><br><br>
 		<div class="container text-center">
 		<h1>Modificar Contacto</h1>
-		<form action="${pageContext.request.contextPath}/Contactomvc/agregar" method="post">
-				<input type="hidden" name="id" value="${contacto.id}">
+		<form data-toggle="validator" action="${pageContext.request.contextPath}/Contactomvc/agregar" method="post">
+			<input type="hidden" name="id" value="${contacto.id}">
 				<div class="row">
 					<div class="col-md-12">
 						<div class="form-group">
-							<input type="text" class="form-control" id="email" name="email" placeholder="email" 
-							required data-error="Entra el nombre del alumno" value="${contacto.email}">
-							
-							<c:if test="${validaciones.email == 'fail'}">
-								<div class="text-danger">
-	                                El email es obligatorio
-	                            </div>
-	                        </c:if>
+							<input type="email" class="form-control" id="email" name="email" placeholder="email" required data-error="El email es obligatorio y debe tener el formato correcto" value="${contacto.email}">
+							<div class="help-block with-errors text-danger"></div>
 						</div>                                 
 					</div>
 					<div class="col-md-12">
 						<div class="form-group">
-							<input type="text" class="form-control" id="telefono" name="telefono" placeholder="Telefono" 
-							required data-error="Entra el telefono" value="${contacto.telefono}">
-							
-							<c:if test="${validaciones.telefono == 'fail'}">
-								<div class="text-danger">
-	                                La telefono es obligatorio
-	                            </div>
-	                        </c:if>
+							<input type="text" class="form-control" id="telefono" name="telefono" placeholder="Telefono" required data-error="La telefono es obligatorio" value="${contacto.telefono}">
+							<div class="help-block with-errors text-danger"></div>
 						</div>                                 
 					</div>
 					<div class="col-md-3"></div>
